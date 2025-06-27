@@ -5,10 +5,10 @@ jobs:
   doom:
     runs-on: ubuntu-latest
     steps:
-      - name: Instalar DOOM (prboom)
+            - name: Instalar Chocolate Doom
         run: |
           sudo apt-get update
-          sudo apt-get install -y prboom
+          sudo apt-get install -y chocolate-doom
 
       - name: Baixar arquivo WAD (DOOM 1)
         run: |
