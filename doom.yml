@@ -1,9 +1,9 @@
 name: Play DOOM in GitHub Actions
-on: [workflow_dispatch]  # Roda manualmente
+on: [workflow_dispatch]  # Permite execução manual
 
 jobs:
   doom:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Sistema operacional
     steps:
       - name: Instalar DOOM (fbdoom)
         run: |
