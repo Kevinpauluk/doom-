@@ -1,14 +1,14 @@
 name: Play DOOM in GitHub Actions
-on: [workflow_dispatch]  # Permite execução manual
+on: [workflow_dispatch]
 
 jobs:
   doom:
-    runs-on: ubuntu-latest  # Sistema operacional
+    runs-on: ubuntu-latest
     steps:
-      - name: Instalar DOOM (fbdoom)
+      - name: Instalar DOOM (prboom)
         run: |
           sudo apt-get update
-          sudo apt-get install -y fbdoom
+          sudo apt-get install -y prboom
 
       - name: Baixar arquivo WAD (DOOM 1)
         run: |
@@ -17,4 +17,4 @@ jobs:
       - name: Rodar DOOM (modo terminal)
         run: |
           echo "Use CTRL+C para sair."
-          fbdoom -iwad doom1.wad -nomouse
+          prboom -iwad doom1.wad -nomouse
